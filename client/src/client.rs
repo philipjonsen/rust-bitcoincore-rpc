@@ -138,7 +138,7 @@ fn handle_defaults<'a, 'b>(
     let required_num = args.len() - defaults.len();
 
     if let Some(i) = first_non_null_optional_idx {
-        &args[..i + 1]
+        &args[..=i]
     } else {
         &args[..required_num]
     }
